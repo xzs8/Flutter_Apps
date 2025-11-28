@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-
+import 'About.dart'
+    '';
 void main() {
   runApp(MaterialApp(
     home: MyHomePage(),
@@ -18,20 +19,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-TextEditingController controller1 = TextEditingController();
-String intext = '';
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blueAccent,
-      title: Text('handle user input'),
+      appBar: AppBar(backgroundColor: Colors.orange,
+      title: Text('Home page'),
       ),
       body:
-      Padding(
-        padding: const EdgeInsets.all(8.0),
+      Center(
         child: Column(
-
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Click to know about us.', style: TextStyle(fontSize: 30),),
+            Container(
+              child: MaterialButton(
+                shape: StadiumBorder(),
+                color: Colors.orange,
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => about()));
+                  },
+                  child: Text('Click me', style: TextStyle(color: Colors.white)),
+              ),
+            ),
+          ],
         ),
       ),
 
