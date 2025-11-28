@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +18,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController _controller = TextEditingController();
-  String text1 = '';
+TextEditingController controller1 = TextEditingController();
+String intext = '';
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(backgroundColor: Colors.blueAccent,
       title: Text('handle user input'),
       ),
-      body: Padding(
+      body:
+      Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -33,35 +36,36 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Center(
               child: Container(
-                height: 90,
-                child: Text(text1,style: TextStyle(fontSize: 30, color: Colors.blueAccent)),
+                height: 100,
+                child: Text(intext, style: TextStyle(color: Colors.blue, fontSize: 40)),
               ),
             ),
             TextField(
-              controller: _controller,
+              controller: controller1,
               decoration: InputDecoration(
                 hintText: 'What\'s in your mind?',
                 border: OutlineInputBorder(),
                 suffixIcon: IconButton(
                     onPressed: (){
-                      _controller.clear();
+                      controller1.clear();
                     },
-                    icon: Icon(Icons.clear)
+                    icon: Icon(Icons.clear),
                 ),
               ),
             ),
             MaterialButton(
                 onPressed: (){
                   setState(() {
-                    text1 = _controller.text;
+                    intext = controller1.text;
                   });
                 },
               color: Colors.blue,
-              child: Text('Press'),
+              child: Text("Click me", style: TextStyle(color: Colors.white),),
             ),
           ],
         ),
       ),
+
     );
   }
 }
