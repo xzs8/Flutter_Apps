@@ -31,38 +31,7 @@ String intext = '';
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Container(
-                height: 100,
-                child: Text(intext, style: TextStyle(color: Colors.blue, fontSize: 40)),
-              ),
-            ),
-            TextField(
-              controller: controller1,
-              decoration: InputDecoration(
-                hintText: 'What\'s in your mind?',
-                border: OutlineInputBorder(),
-                suffixIcon: IconButton(
-                    onPressed: (){
-                      controller1.clear();
-                    },
-                    icon: Icon(Icons.clear),
-                ),
-              ),
-            ),
-            MaterialButton(
-                onPressed: (){
-                  setState(() {
-                    intext = controller1.text;
-                  });
-                },
-              color: Colors.blue,
-              child: Text("Click me", style: TextStyle(color: Colors.white),),
-            ),
-          ],
+
         ),
       ),
 
