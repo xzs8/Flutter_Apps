@@ -19,7 +19,6 @@ class _MyAppState extends State<MyApp> {
     _loadSettings();
   }
 
-  // Method to load saved settings
   Future<void> _loadSettings() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -28,7 +27,6 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  // Method to save settings
   Future<void> _saveSettings() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('username', _usernameController.text);
@@ -39,8 +37,8 @@ class _MyAppState extends State<MyApp> {
   // Method to Delete settings
   Future<void> _clearSettings() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('username'); // Remove username
-    await prefs.remove('darkMode'); // Remove dark mode preference
+    await prefs.remove('username');
+    await prefs.remove('darkMode');
   }
 
   @override
