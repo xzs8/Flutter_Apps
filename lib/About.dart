@@ -20,7 +20,7 @@ class _aboutState extends State<about> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-              Text('Welcome to our app', style: TextStyle(fontSize: 40),),
+              Text('Welcome To Our App', style: TextStyle(fontSize: 40),),
               MaterialButton(
                 shape: StadiumBorder(),
                   onPressed: (){
