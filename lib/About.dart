@@ -24,10 +24,10 @@ class _aboutState extends State<about> {
               MaterialButton(
                 shape: StadiumBorder(),
                   onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
+                    Navigator.pop(context);
                   },
                 color: Colors.green,
-                child: Text('Click me', style: TextStyle(color: Colors.white),),
+                child: Text('Back', style: TextStyle(color: Colors.white),),
               ),
           ],
         ),
