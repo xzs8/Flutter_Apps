@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(SettingsPage());
+  runApp(MyApp());
 }
-class SettingsPage extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  _SettingsPageState createState() => _SettingsPageState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _MyAppState extends State<MyApp> {
   TextEditingController _usernameController = TextEditingController();
   bool _darkModeEnabled = false;
 
