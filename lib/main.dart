@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'About.dart'
-    '';
+import 'About.dart';
 void main() {
   runApp(MaterialApp(
     home: MyHomePage(),
