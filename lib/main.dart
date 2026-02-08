@@ -1,28 +1,31 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'MyHomePage .dart';
+
+
 void main() {
-  runApp(MaterialApp(
-    home: MyHomePage(),
-  ));
+  runApp(const MyApp());
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
+    return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: MyHomePage()
     );
   }
 }
+
+
+
+
+
+
+
